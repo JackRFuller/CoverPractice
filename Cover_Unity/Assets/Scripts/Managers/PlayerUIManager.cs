@@ -10,6 +10,10 @@ public class PlayerUIManager : MonoBehaviour {
 	[Header("Instructions")]
 	[SerializeField] private Text instructionText;
 
+    [Header("Bomb Items")]
+    public Image defuseTimer;
+    private float bombTimer = 1;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,6 +23,19 @@ public class PlayerUIManager : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void DefuseIndicator(float _defuseRate)
+    {
+        defuseTimer.enabled = true;            
+
+        defuseTimer.fillAmount -= _defuseRate * Time.deltaTime;
+    }
+
+    public void ResetDefuseID()
+    {
+        defuseTimer.enabled = false;
+        defuseTimer.fillAmount = 1;
+    }
 
 	public void ShowInstructions(string _instructions)
 	{

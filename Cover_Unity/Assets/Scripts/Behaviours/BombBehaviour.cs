@@ -14,8 +14,7 @@ public class BombBehaviour : MonoBehaviour {
 	[SerializeField] private Text countdownText;
 	private bool timerRunning = true;
 
-	[Header("Defuse Items")]
-	[SerializeField] private float defuseTime;
+	[Header("Defuse Items")]	
 	private float startingdefuseTime;
 	[SerializeField] private float defuseRate;
 	private bool defusePossible;
@@ -32,8 +31,6 @@ public class BombBehaviour : MonoBehaviour {
 
 	void SetValues()
 	{
-		startingdefuseTime = defuseTime;
-
 		string formattedTime = string.Format("{0}:{1}:{2}", minutes, seconds, (int)miliseconds);
 		countdownText.text = formattedTime;
 	}
@@ -66,18 +63,19 @@ public class BombBehaviour : MonoBehaviour {
 
 	void Defuse()
 	{
-		defuseTime -= defuseRate * Time.deltaTime;
+        PUM_Script.DefuseIndicator(defuseRate);
 
-		if(defuseTime <= 0)
-		{
-			defused = true;
-		}
+		if(PUM_Script.defuseTimer.fillAmount <= 0)
+        {
+            defused = true;
+            PUM_Script.HideInstruction();
+        }
 	}
 
 	void ResetDefuse()
 	{
-		defuseTime = startingdefuseTime;
-	}
+        PUM_Script.ResetDefuseID();
+    }
 
 	void RunTimer()
 	{
@@ -119,7 +117,7 @@ public class BombBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.tag == "Player")
+		if(other.tag == "Player" && !defused)
 		{
 			defusePossible = true;
 			PUM_Script.ShowInstructions(instructionText);
