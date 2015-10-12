@@ -3,11 +3,21 @@ using System.Collections;
 
 public class RifleEnemyBehaviour : BaseEnemyClass {
 
+	[Header("Detection Zone")]
+	[SerializeField] private BoxCollider detectionZone;
+	[SerializeField] private Vector3 detectionZoneSize;
+
+
 	// Use this for initialization
 	void Start () {
 
 		navMeshAgent.speed = walkSpeed;
 	
+	}
+
+	void InitialValues()
+	{
+		detectionZone.size = detectionZoneSize;
 	}
 	
 	// Update is called once per frame
@@ -28,7 +38,7 @@ public class RifleEnemyBehaviour : BaseEnemyClass {
 
 		float _distance = Vector3.Distance(transform.position, patrollingWaypoints[waypointID].position);
 
-		if(_distance < 1)
+		if(_distance < 2)
 		{
 			waypointID++;
 			if(waypointID == patrollingWaypoints.Length)
@@ -37,5 +47,13 @@ public class RifleEnemyBehaviour : BaseEnemyClass {
 			}
 		}
 
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "Player")
+		{
+			CurrentMode = Mode.Attack;
+		}
 	}
 }
