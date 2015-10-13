@@ -4,9 +4,17 @@ using System.Collections;
 public class PlayerShootBehaviour : MonoBehaviour {
 
     [Header("Managers")]
-    [SerializeField] private GunAnimation GA_Script;
-    
-    [SerializeField] private Transform gunTransform;    
+	[SerializeField] private PlayerUIManager PUM_Script;
+    [SerializeField] private GunAnimation GA_Script;  
+
+	[Header("Ammo")]
+	private bool isReloading;
+	[SerializeField] private int currentClipAmount;
+	[SerializeField] private int maxClipSize;
+	[SerializeField] private int currentAmmo;
+	[SerializeField] private int maxAmmo;
+	[SerializeField] private float reloadCooldownTime;
+      
 
 	// Use this for initialization
 	void Start () {
@@ -18,24 +26,71 @@ public class PlayerShootBehaviour : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.R))
         {
-            CheckAmmo();
+            CheckAmmo("reload");
         }
-	
+
+		if(Input.GetMouseButton(0))
+		{
+			CheckAmmo("shoot");
+		}	
 	}
 
-    void CheckAmmo()
-    {
-        Reload();
-    }
+	void CheckAmmo(string _phase)
+	{
+		if(_phase == "shoot")
+		{
+			if(currentClipAmount > 0)
+			{
+				Shoot();
+			}
+			else if(currentAmmo > 0)
+			{
+				Reload();
+			}
+		}
+		if(_phase == "reload")
+		{
+			if(currentClipAmount < maxClipSize && currentAmmo > 0)
+			{
+				Reload();
+			}
+		}
+	}
+
+	void Shoot()
+	{
+		currentClipAmount--;
+		PUM_Script.Shooting(currentClipAmount);
+	}   
 
     void Reload()
     {
-        GA_Script.Reload();
+		if(!isReloading)
+		{
+			isReloading = true;
+
+			StartCoroutine(ReloadCooldown());
+
+			for(int i = 0; i < maxClipSize; i++)
+			{
+				if(currentAmmo > 0 && currentClipAmount < maxClipSize)
+				{
+					currentClipAmount++;
+					currentAmmo--;
+					PUM_Script.Reload(currentClipAmount, currentAmmo);
+				}
+				else
+				{
+					break;
+				}
+			}
+		}
     }
 
-    void SetGunPosition()
-    {
-      
-        
-    }
+	IEnumerator ReloadCooldown()
+	{
+		yield return new WaitForSeconds(reloadCooldownTime);
+		isReloading = false;
+	}
+
 }

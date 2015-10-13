@@ -167,7 +167,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		void StandUp()
 		{
-			m_Capsule.height = 1.6F;
+			m_Capsule.height = 2F;
 
 			SetStandingUpValues();
 		}
@@ -196,7 +196,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		void SetStandingUpValues()
 		{
-			transform.position = new Vector3(transform.position.x, 0.8F, transform.position.z);
+			transform.position = new Vector3(transform.position.x, 1.0F, transform.position.z);
 
 			movementSettings.ForwardSpeed = movementSettings.startingForwardSpeed;
 			movementSettings.BackwardSpeed = movementSettings.startingBackwardSpeed;
