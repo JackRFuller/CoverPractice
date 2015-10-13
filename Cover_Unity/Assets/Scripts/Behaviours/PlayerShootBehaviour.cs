@@ -33,6 +33,29 @@ public class PlayerShootBehaviour : MonoBehaviour {
 		{
 			CheckAmmo("shoot");
 		}	
+
+		if((Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0))
+		{
+			if(!isReloading)
+			{
+				if(Input.GetKey(KeyCode.LeftShift))
+				{
+					GA_Script.Run();
+				}
+				else
+				{
+					GA_Script.Walk();
+				}
+
+			}
+		}
+		else
+		{
+			if(!isReloading)
+			{
+				GA_Script.Idle();
+			}
+		}
 	}
 
 	void CheckAmmo(string _phase)
@@ -59,6 +82,8 @@ public class PlayerShootBehaviour : MonoBehaviour {
 
 	void Shoot()
 	{
+		GA_Script.Shoot();
+
 		currentClipAmount--;
 		PUM_Script.Shooting(currentClipAmount);
 	}   
@@ -89,8 +114,12 @@ public class PlayerShootBehaviour : MonoBehaviour {
 
 	IEnumerator ReloadCooldown()
 	{
+		GA_Script.Reload();
+
 		yield return new WaitForSeconds(reloadCooldownTime);
 		isReloading = false;
+
+		GA_Script.Idle();
 	}
 
 }
