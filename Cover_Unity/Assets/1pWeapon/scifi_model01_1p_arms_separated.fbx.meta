@@ -158,6 +158,7 @@ ModelImporter:
     9500000: //RootNode
     11100000: //RootNode
     13700000: Arms_1P
+    13700002: Arms_1P 1
   materials:
     importMaterials: 1
     materialName: 0

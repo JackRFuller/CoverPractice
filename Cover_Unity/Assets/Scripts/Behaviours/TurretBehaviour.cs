@@ -90,7 +90,7 @@ public class TurretBehaviour : MonoBehaviour {
 				target = hit.collider.GetComponent<Transform>();
 				StopCoroutine(StopSearch());
 				lostTarget = false;
-				Debug.Log("Hitting_Player");
+				
 			}
 			if(hit.collider.tag != "Player")
 			{
