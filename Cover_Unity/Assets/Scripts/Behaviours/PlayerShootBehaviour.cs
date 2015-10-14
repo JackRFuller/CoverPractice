@@ -18,9 +18,25 @@ public class PlayerShootBehaviour : MonoBehaviour {
     [SerializeField] private float damage;
     [SerializeField] private Camera mainCamera;
 
+    [Header("Aiming")]
+    [SerializeField] private Transform gunModel;
+    public enum aimingMode
+    {
+        Aiming,
+        HipShooting,
+    }
+
+    public aimingMode currentAimingMode;
+       
+    [SerializeField] private float zoomInFOV;
+    [SerializeField] private float zoomOutFOV;
+    [SerializeField] private Vector3 aimingPosition;
+    [SerializeField] private Vector3 hipPosition;
+
 	[Header("Ammo")]
-	private bool isReloading;
-	[SerializeField] private int currentClipAmount;
+    [SerializeField] private int currentClipAmount;
+    private bool isReloading;
+    private bool isLoadingAmmo;	
 	[SerializeField] private int maxClipSize;
 	[SerializeField] private int currentAmmo;
 	[SerializeField] private int maxAmmo;
@@ -38,16 +54,17 @@ public class PlayerShootBehaviour : MonoBehaviour {
 
         ShootingControls();
 
-        
+        AimingControls();
+
+        ShootingControls();
+
+        ReloadingControls();        
 	}
 
-    void ShootingControls()
-    {
-        if (Input.GetKey(KeyCode.R))
-        {
-            CheckAmmo("reload");
-        }
+    #region Controls
 
+    void ShootingControls()
+    { 
         if (Input.GetMouseButtonDown(0))
         {
             if((timeStamp <= Time.time) && !isReloading && !isShooting)
@@ -62,18 +79,29 @@ public class PlayerShootBehaviour : MonoBehaviour {
 		{
 			isShooting = false;
 		}
+    }
 
+    void MovementControls()
+    {
         if ((Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0))
         {
             if (!isReloading)
             {
+
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    GA_Script.Run();
+                    if (currentAimingMode == aimingMode.HipShooting)
+                    {
+                        GA_Script.Run();
+                    }
+
                 }
                 else
                 {
-                    GA_Script.Walk();
+                    if (currentAimingMode == aimingMode.HipShooting)
+                    {
+                        GA_Script.Walk();
+                    }
                 }
 
             }
@@ -85,6 +113,47 @@ public class PlayerShootBehaviour : MonoBehaviour {
                 GA_Script.Idle();
             }
         }
+    }
+
+    void AimingControls()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (!isReloading)
+            {
+                ZoomIn();
+            }
+
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            ZoomOut();
+        }
+    }
+
+    void ReloadingControls()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            CheckAmmo("reload");
+        }
+    }
+
+    #endregion
+
+    void ZoomIn()
+    {
+        currentAimingMode = aimingMode.Aiming;
+        gunModel.localPosition = aimingPosition;
+        mainCamera.fieldOfView = zoomInFOV;
+    }
+
+    void ZoomOut()
+    {
+        currentAimingMode = aimingMode.HipShooting;
+        gunModel.localPosition = hipPosition;
+        mainCamera.fieldOfView = zoomOutFOV;
     }
 
 	void CheckAmmo(string _phase)
@@ -137,8 +206,6 @@ public class PlayerShootBehaviour : MonoBehaviour {
 			
 			timeStamp += cooldownTime;
 		}
-
-
 	}   
 
     void Reload()
@@ -146,6 +213,8 @@ public class PlayerShootBehaviour : MonoBehaviour {
 		if(!isReloading)
 		{
 			isReloading = true;
+
+            ZoomOut();
 
 			StartCoroutine(ReloadCooldown());
 
@@ -168,10 +237,69 @@ public class PlayerShootBehaviour : MonoBehaviour {
 	IEnumerator ReloadCooldown()
 	{
 		GA_Script.Reload();
-
 		yield return new WaitForSeconds(reloadCooldownTime);
 		isReloading = false;
 		GA_Script.Idle();
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "AmmoCrate")
+        {
+            PUM_Script.AmmoMode();
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "AmmoCrate")
+        {
+            if(currentAmmo < maxAmmo)
+            {
+                PUM_Script.ShowInstructions("Press E To Acquire Ammo");
+
+                if (Input.GetKey(KeyCode.E))
+                {
+                    StartCoroutine(AcquireAmmo());
+                    PUM_Script.AcquireAmmo();
+                }
+                if (Input.GetKeyUp(KeyCode.E))
+                {
+                    StopCoroutine(AcquireAmmo());
+                    PUM_Script.HideInstruction();
+                    PUM_Script.ResetDefuseID();
+                }
+            }
+            else
+            {
+                PUM_Script.HideInstruction();
+                StopCoroutine(AcquireAmmo());
+                PUM_Script.ResetDefuseID();
+            }
+        }
+    } 
+    
+    IEnumerator AcquireAmmo()
+    {
+        if (!isLoadingAmmo)
+        {
+            isLoadingAmmo = true;
+            yield return new WaitForSeconds(1F);
+            currentAmmo = maxAmmo;
+            PUM_Script.AmmoUpdate(currentAmmo);
+            isLoadingAmmo = false;
+        }
+        
+    }   
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "AmmoCrate")
+        {
+            PUM_Script.HideInstruction();
+            StopCoroutine(AcquireAmmo());
+            PUM_Script.ResetDefuseID();
+        }
+    }
 
 }

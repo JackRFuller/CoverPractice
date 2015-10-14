@@ -9,6 +9,7 @@ public class GunAnimation : MonoBehaviour {
 	[SerializeField] private AnimationClip sprintClip;
 	[SerializeField] private AnimationClip reloadClip;
 	[SerializeField] private AnimationClip fireClip;
+    [SerializeField] private AnimationClip zoomInClip;
 
 	[SerializeField] private Animation gunAnimation;
 	[SerializeField] private float shootingSpeed;
@@ -43,6 +44,11 @@ public class GunAnimation : MonoBehaviour {
 		}
 
 	}
+
+    public void ZoomIn()
+    {
+        gunAnimation.Play(zoomInClip.name);        
+    }
 
 	public void Shoot()
 	{

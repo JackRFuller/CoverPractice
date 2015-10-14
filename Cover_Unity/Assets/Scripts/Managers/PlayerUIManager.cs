@@ -10,14 +10,15 @@ public class PlayerUIManager : MonoBehaviour {
 	[Header("Instructions")]
 	[SerializeField] private Text instructionText;
 
-    [Header("Bomb Items")]
+    [Header("Bomb Items")]   
     public Image defuseTimer;
     private float bombTimer = 1;
 
 	[Header("Ammo Items")]
-	[SerializeField] private Image ammoDiagram;
+	[SerializeField] private Image ammoDiagram;  
 	[SerializeField] private Text clipText;
 	[SerializeField] private Text ammoText;
+    [SerializeField] private float ammoFillRate;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +42,22 @@ public class PlayerUIManager : MonoBehaviour {
 		clipText.text = _currentClipSize.ToString();
 		ammoDiagram.fillAmount -= 0.024F;
 	}
+
+    public void AmmoMode()
+    {
+        defuseTimer.fillAmount = 0;
+    }
+
+    public void AcquireAmmo()
+    {
+        defuseTimer.enabled = true;
+        defuseTimer.fillAmount += ammoFillRate * Time.deltaTime;
+    }
+
+    public void AmmoUpdate(int _ammoCount)
+    {
+        ammoText.text = _ammoCount.ToString();
+    }
 
 	public void Reload(int _currentClipSize, int _currentAmmoSize)
 	{

@@ -266,7 +266,7 @@ ModelImporter:
       takeName: DefaultAnim
       firstFrame: 0
       lastFrame: 869
-      wrapMode: 0
+      wrapMode: 1
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
