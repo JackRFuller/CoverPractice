@@ -3,7 +3,16 @@ using System.Collections;
 
 public class GunAnimation : MonoBehaviour {
 
+	[Header("Animation Clips")]
+	[SerializeField] private AnimationClip idleClip;
+	[SerializeField] private AnimationClip runClip;
+	[SerializeField] private AnimationClip sprintClip;
+	[SerializeField] private AnimationClip reloadClip;
+	[SerializeField] private AnimationClip fireClip;
+
 	[SerializeField] private Animation gunAnimation;
+	[SerializeField] private float shootingSpeed;
+	private bool isShooting;
 
 	// Use this for initialization
 	void Start () {
@@ -13,33 +22,47 @@ public class GunAnimation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
+		//Debug.Log(gunAnimation.isPlaying);
 	
 	}
 
 	public void Idle()
 	{
-		gunAnimation.Play("Idle");
+		if(!gunAnimation.IsPlaying(fireClip.name))
+		{
+			gunAnimation.CrossFade(idleClip.name);
+		}
+
 	}
 
 	public void Walk()
 	{
-		gunAnimation.CrossFade("Run");
+		if(!gunAnimation.IsPlaying(fireClip.name))
+		{
+			gunAnimation.CrossFade(runClip.name);
+		}
+
 	}
 
 	public void Shoot()
 	{
-		gunAnimation.Play("Fire1shot");
+		if(!gunAnimation.IsPlaying(fireClip.name))
+		{
+			//gunAnimation["SMG_fireburst"].speed = shootingSpeed;
+			gunAnimation.CrossFade(fireClip.name);
+			Debug.Log("Play");
+		}
+
 	}
 
 	public void Run()
 	{
-		gunAnimation.CrossFade("Run2");
+		gunAnimation.CrossFade(sprintClip.name);
 	}
 
     public void Reload()
     {
-		gunAnimation.CrossFade("SMG_reload");
+		gunAnimation.CrossFade(reloadClip.name);
     }
 
 

@@ -10,7 +10,9 @@ public class PlayerShootBehaviour : MonoBehaviour {
     [Header("Shooting")]
     [SerializeField] private float shotRange;
     [SerializeField] private float cooldownTime;
+	[SerializeField] private int burstRate;
     private float timeStamp;
+	private bool isShooting;
     [SerializeField] private float xAccuracy;
     [SerializeField] private float yAccuracy;
     [SerializeField] private float damage;
@@ -46,14 +48,20 @@ public class PlayerShootBehaviour : MonoBehaviour {
             CheckAmmo("reload");
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(timeStamp <= Time.time)
+            if((timeStamp <= Time.time) && !isReloading && !isShooting)
             {
+				isShooting = false;
+
                 CheckAmmo("shoot");
-            }
-            
+            }            
         }
+
+		if(Input.GetMouseButtonUp(0))
+		{
+			isShooting = false;
+		}
 
         if ((Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0))
         {
@@ -103,22 +111,34 @@ public class PlayerShootBehaviour : MonoBehaviour {
 
 	void Shoot()
 	{
-        Vector3 _camerTransform = new Vector3(xAccuracy, yAccuracy, 0);
+		if(!isShooting)
+		{
+			isShooting = true;
 
-        Ray ray = mainCamera.ViewportPointToRay(_camerTransform);
-        //Debug.DrawRay(ray.origin, ray.direction, Color.red, 1);
+			GA_Script.Shoot();
 
-        RaycastHit hit;
+			for(int i = 0; i < burstRate; i++)
+			{
+				Vector3 _camerTransform = new Vector3(xAccuracy, yAccuracy, 0);
+				
+				Ray ray = mainCamera.ViewportPointToRay(_camerTransform);
+				//Debug.DrawRay(ray.origin, ray.direction, Color.red, 1);
+				
+				RaycastHit hit;
+				
+				if(Physics.Raycast(ray, out hit, shotRange))
+				{
+					Debug.Log(hit.collider.name);
+				}
+				
+				currentClipAmount--;
+				PUM_Script.Shooting(currentClipAmount);
+			}
+			
+			timeStamp += cooldownTime;
+		}
 
-        if(Physics.Raycast(ray, out hit, shotRange))
-        {
-            Debug.Log(hit.collider.name);
-        }
 
-		GA_Script.Shoot();
-
-		currentClipAmount--;
-		PUM_Script.Shooting(currentClipAmount);
 	}   
 
     void Reload()
@@ -151,7 +171,6 @@ public class PlayerShootBehaviour : MonoBehaviour {
 
 		yield return new WaitForSeconds(reloadCooldownTime);
 		isReloading = false;
-
 		GA_Script.Idle();
 	}
 

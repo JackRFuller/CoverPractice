@@ -39,7 +39,7 @@ public class PlayerUIManager : MonoBehaviour {
 	public void Shooting(int _currentClipSize)
 	{
 		clipText.text = _currentClipSize.ToString();
-		ammoDiagram.fillAmount -= 0.025F;
+		ammoDiagram.fillAmount -= 0.024F;
 	}
 
 	public void Reload(int _currentClipSize, int _currentAmmoSize)

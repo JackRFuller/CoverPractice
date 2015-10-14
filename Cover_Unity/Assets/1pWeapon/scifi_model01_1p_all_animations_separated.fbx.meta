@@ -938,7 +938,7 @@ ModelImporter:
       takeName: Fire1shot
       firstFrame: 0
       lastFrame: 869
-      wrapMode: 2
+      wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
