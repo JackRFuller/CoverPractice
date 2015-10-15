@@ -64,6 +64,7 @@ public class GunAnimation : MonoBehaviour {
 	public void Run()
 	{
 		gunAnimation.CrossFade(sprintClip.name);
+		Debug.Log("Hit");
 	}
 
     public void Reload()

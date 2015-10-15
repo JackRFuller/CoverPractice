@@ -11,12 +11,17 @@ public class PlayerShootBehaviour : MonoBehaviour {
     [SerializeField] private float shotRange;
     [SerializeField] private float cooldownTime;
 	[SerializeField] private int burstRate;
+	[SerializeField] private float hipRecoilRate;
+	[SerializeField] private float aimingRecoilRate;
     private float timeStamp;
 	private bool isShooting;
     [SerializeField] private float xAccuracy;
+	private float startingYAccuracy;
     [SerializeField] private float yAccuracy;
+	[SerializeField] private float recoilCooldownTime;
     [SerializeField] private float damage;
     [SerializeField] private Camera mainCamera;
+	[SerializeField] private GameObject bulletHoleDecal;
 
     [Header("Aiming")]
     [SerializeField] private Transform gunModel;
@@ -46,7 +51,9 @@ public class PlayerShootBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         
-	
+		startingYAccuracy = yAccuracy;
+
+
 	}
 	
 	// Update is called once per frame
@@ -58,7 +65,9 @@ public class PlayerShootBehaviour : MonoBehaviour {
 
         ShootingControls();
 
-        ReloadingControls();        
+        ReloadingControls();     
+
+		MovementControls();
 	}
 
     #region Controls
@@ -162,7 +171,7 @@ public class PlayerShootBehaviour : MonoBehaviour {
 		{
 			if(currentClipAmount > 0)
 			{
-				Shoot();
+				StartCoroutine(ShootBullet());
 			}
 			else if(currentAmmo > 0)
 			{
@@ -178,26 +187,49 @@ public class PlayerShootBehaviour : MonoBehaviour {
 		}
 	}
 
-	void Shoot()
+	IEnumerator ShootBullet()
 	{
 		if(!isShooting)
 		{
 			isShooting = true;
-
+			
 			GA_Script.Shoot();
-
+			
 			for(int i = 0; i < burstRate; i++)
 			{
-				Vector3 _camerTransform = new Vector3(xAccuracy, yAccuracy, 0);
+				yield return new WaitForSeconds(recoilCooldownTime);
+
+				if(i == 0)
+				{
+					yAccuracy = startingYAccuracy;
+				}
 				
+				Vector3 _camerTransform = new Vector3(xAccuracy, yAccuracy, 0);
 				Ray ray = mainCamera.ViewportPointToRay(_camerTransform);
 				//Debug.DrawRay(ray.origin, ray.direction, Color.red, 1);
+				
+				if(currentAimingMode == aimingMode.HipShooting)
+				{
+					yAccuracy += hipRecoilRate;
+				}
+				
+				if(currentAimingMode == aimingMode.Aiming)
+				{
+					yAccuracy += aimingRecoilRate;
+				}
+
 				
 				RaycastHit hit;
 				
 				if(Physics.Raycast(ray, out hit, shotRange))
 				{
-					Debug.Log(hit.collider.name);
+					if(hit.collider.tag == "Environment")
+					{
+						Vector3 _spawnPosition = hit.point +(hit.normal * 0.01F);
+						Quaternion _hitRotation = Quaternion.FromToRotation(Vector3.forward, hit.normal);
+						GameObject decal;
+						decal = Instantiate(bulletHoleDecal, _spawnPosition, _hitRotation) as GameObject;
+					}
 				}
 				
 				currentClipAmount--;
@@ -206,10 +238,10 @@ public class PlayerShootBehaviour : MonoBehaviour {
 			
 			timeStamp += cooldownTime;
 		}
-	}   
-
-    void Reload()
-    {
+	}
+	
+	void Reload()
+	{
 		if(!isReloading)
 		{
 			isReloading = true;
