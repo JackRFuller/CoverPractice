@@ -23,6 +23,22 @@ public class PlayerShootBehaviour : MonoBehaviour {
     [SerializeField] private Camera mainCamera;
 	[SerializeField] private GameObject bulletHoleDecal;
 
+	[Header("Shooting Mode")]
+	[SerializeField] private float sniperFireRate;
+	[SerializeField] private float smgFireRate;
+	[SerializeField] private float sniperCooldownRate;
+	[SerializeField] private float smgCooldownRate;
+	[SerializeField] private float sniperXAccuracy;
+	[SerializeField] private float sniperYAccuracy;
+	[SerializeField] private float smgXAccuracy;
+	[SerializeField] private float smgYAccuracy;
+	public enum ShootingMode
+	{
+		SMG,
+		Sniper,
+	}
+	public ShootingMode currentShootingMode;
+
     [Header("Aiming")]
     [SerializeField] private Transform gunModel;
     public enum aimingMode
@@ -30,7 +46,6 @@ public class PlayerShootBehaviour : MonoBehaviour {
         Aiming,
         HipShooting,
     }
-
     public aimingMode currentAimingMode;
        
     [SerializeField] private float zoomInFOV;
@@ -68,6 +83,8 @@ public class PlayerShootBehaviour : MonoBehaviour {
         ReloadingControls();     
 
 		MovementControls();
+
+		ChangeShootingMode();
 	}
 
     #region Controls
@@ -89,6 +106,26 @@ public class PlayerShootBehaviour : MonoBehaviour {
 			isShooting = false;
 		}
     }
+
+	void ChangeShootingMode()
+	{
+		if(Input.GetKeyUp(KeyCode.Q))
+		{
+			if(!isReloading && !isShooting)
+			{
+				switch(currentShootingMode)
+				{
+				case(ShootingMode.SMG):
+					ChangeToSniper();
+					break;
+				case(ShootingMode.Sniper):
+					ChangeToSMG();
+					break;
+				}
+			}
+
+		}
+	}
 
     void MovementControls()
     {
@@ -150,6 +187,20 @@ public class PlayerShootBehaviour : MonoBehaviour {
     }
 
     #endregion
+
+	void ChangeToSniper()
+	{
+		GA_Script.SwitchToSniper();
+
+		currentShootingMode = ShootingMode.Sniper;
+	}
+
+	void ChangeToSMG()
+	{
+		GA_Script.SwitchToSMG();
+
+		currentShootingMode = ShootingMode.SMG;
+	}
 
     void ZoomIn()
     {

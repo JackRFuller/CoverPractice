@@ -3178,7 +3178,7 @@ ModelImporter:
       takeName: SniperToSMG
       firstFrame: 0
       lastFrame: 869
-      wrapMode: 0
+      wrapMode: 8
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -3402,7 +3402,7 @@ ModelImporter:
       takeName: SMGToSniper
       firstFrame: 0
       lastFrame: 869
-      wrapMode: 0
+      wrapMode: 8
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
