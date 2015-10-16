@@ -20,6 +20,9 @@ public class PlayerUIManager : MonoBehaviour {
 	[SerializeField] private Text ammoText;
     [SerializeField] private float ammoFillRate;
 
+	[Header("Sniper Items")]
+	[SerializeField] private Image sniperScope;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -86,6 +89,16 @@ public class PlayerUIManager : MonoBehaviour {
 	public void HealthUpdate(float _remainingHealth)
 	{
 		healthText.text = _remainingHealth.ToString();
+	}
+
+	public void ActivateSniper()
+	{
+		sniperScope.enabled = true;
+	}
+
+	public void DeactivateSniper()
+	{
+		sniperScope.enabled = false;
 	}
 
 }
