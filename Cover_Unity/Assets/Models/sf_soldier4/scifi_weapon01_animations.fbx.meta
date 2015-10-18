@@ -67,6 +67,8 @@ ModelImporter:
     400058: SF_Weapon
     400060: SF_Weapon 1
     400062: U3DRoot
+    2300000: SF_Weapon 1
+    3300000: SF_Weapon 1
     4300000: SF_Weapon
     7400000: Take_001
     7400002: Run_Forward_Aim
@@ -98,6 +100,7 @@ ModelImporter:
     7400054: Sniper_transformation
     7400056: SMG_transformation
     9500000: //RootNode
+    11100000: //RootNode
     13700000: SF_Weapon 1
   materials:
     importMaterials: 1
@@ -107,24 +110,2634 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: <Root Transform>
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationDoRetargetingWarnings: 1
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take_001
+      takeName: Take_001
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run_Forward_Aim
+      takeName: Run_Forward_Aim
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run_Forward_Weapon
+      takeName: Run_Forward_Weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Forwar_Weapon
+      takeName: Crouch_Forwar_Weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Forward_Aim
+      takeName: Crouch_Forward_Aim
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Fire_One_Shot
+      takeName: Crouch_Fire_One_Shot
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle_Crouch_Aim
+      takeName: Idle_Crouch_Aim
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Standing_Aim_Idle
+      takeName: Standing_Aim_Idle
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Standing_Fire_One_Shot
+      takeName: Standing_Fire_One_Shot
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Roll_Forward
+      takeName: Roll_Forward
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Mele_1_with_weapon
+      takeName: Mele_1_with_weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Mele_2_with_weapon
+      takeName: Mele_2_with_weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump_Up
+      takeName: Jump_Up
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump_Land
+      takeName: Jump_Land
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch__Right_Aim
+      takeName: Crouch__Right_Aim
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Left_Aim
+      takeName: Crouch_Left_Aim
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Right_Weapon
+      takeName: Crouch_Right_Weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Left_Weapon
+      takeName: Crouch_Left_Weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Backwad_Aim
+      takeName: Crouch_Backwad_Aim
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch_Backwad_Weapon
+      takeName: Crouch_Backwad_Weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run_Backward_Aim
+      takeName: Run_Backward_Aim
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run_Backward_Weapon
+      takeName: Run_Backward_Weapon
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Mele_3_fists
+      takeName: Mele_3_fists
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Grenade_Tos
+      takeName: Grenade_Tos
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dead_HeadShot
+      takeName: Dead_HeadShot
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dead_2
+      takeName: Dead_2
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Reload
+      takeName: Reload
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Sniper_transformation
+      takeName: Sniper_transformation
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: SMG_transformation
+      takeName: SMG_transformation
+      firstFrame: 0
+      lastFrame: 895
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: U3DRoot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_Trigger
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Clip
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevBack/b_ElevBack1/b_Scope/b_ScopeHolo3
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_ElevFront/b_ElevFront1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelLower
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderBack
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelSliderFront
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_GunBarrelStabilizer
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_IronSight_slider/b_IronSight_Pivot/b_IronSight
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_muzzle
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Projectile
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Rect_Pullout1/b_Rect_Pullout2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Shoulder1/b_Shoulder2
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_L
+        weight: 1
+      - path: U3DRoot/b_Root_Weapon/b_WeaponBase/b_Wing_R
+        weight: 1
+      - path: U3DRoot/SF_Weapon
+        weight: 1
+      - path: U3DRoot/SF_Weapon 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -154,10 +2767,10 @@ ModelImporter:
     armStretch: .0500000007
     legStretch: .0500000007
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: U3DRoot
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

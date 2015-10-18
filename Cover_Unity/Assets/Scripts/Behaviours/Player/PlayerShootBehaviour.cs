@@ -18,11 +18,7 @@ public class PlayerShootBehaviour : MonoBehaviour {
     [SerializeField] private float xAccuracy; //-- Determines how close to the centre of the screen on the X Axis the shot is
     [SerializeField] private float yAccuracy; //-- Determines how close to the centre of the screen on the Y Axis the shot is
 	private float startingYAccuracy;
-	[SerializeField] private float recoilCooldownTime; //-- Determines the amount of time between individual shots - relates more for SMG mode
-    [SerializeField] private float smgDamage; //-- Determines how much damage the SMG gun does
-	[SerializeField] private float sniperDamage; //-- Determines how much damage the Sniper does
-	[SerializeField] private float sniperDamageDistance; //-- Damage modifier applied to the sniper rifle if it is close
-	[SerializeField] private float headshotDamage; //-- Damage modifier applied for a headshot;
+	[SerializeField] private float recoilCooldownTime; //-- Determines the amount of time between individual shots - relates more for SMG mode    
     [SerializeField] private Camera mainCamera;
 	[SerializeField] private Camera gunCamera;
 	[SerializeField] private GameObject bulletHoleDecal;
@@ -43,8 +39,17 @@ public class PlayerShootBehaviour : MonoBehaviour {
 	[SerializeField] private float smgXAccuracy;
 	[SerializeField] private float smgYAccuracy;
 
+    [Header("Damage Modifiers")]
+    [SerializeField] private float smgDamage; //-- Determines how much damage the SMG gun does
+    [SerializeField] private float smgDamageDistance; //-- Max Distance that SMG can do 100% damage
+    [SerializeField] private float smgDistanceModifier; //-- Modifier applied to lower damage done based on distance
+    [SerializeField] private float sniperDamage; //-- Determines how much damage the Sniper does
+    [SerializeField] private float sniperDamageDistance; //-- Determines the miniumum distance at which the damage modifier is applied
+    [SerializeField] private float sniperDamageModifier; //Damage modifier applied if the sniper rifle is very close
+    [SerializeField] private float headshotDamage; //-- Damage modifier applied for a headshot;
 
-	public enum ShootingMode
+
+    public enum ShootingMode
 	{
 		SMG,
 		Sniper,
@@ -346,7 +351,7 @@ public class PlayerShootBehaviour : MonoBehaviour {
 					}
 					if(hit.collider.tag == "Head")
 					{
-						CalculateDamage(true, hit.collider.gameObject, _distToPC);
+						CalculateDamage(true, hit.transform.parent.root.gameObject, _distToPC);
 					}
 				}
 				
@@ -365,14 +370,19 @@ public class PlayerShootBehaviour : MonoBehaviour {
 		if(currentShootingMode == ShootingMode.SMG)
 		{
 			_damage = smgDamage;
+
+            if(_DistToPC > smgDamageDistance)
+            {
+                _damage = (_damage / 100) * smgDistanceModifier;
+            }
 		}
 		if(currentShootingMode == ShootingMode.Sniper)
 		{
 			_damage = sniperDamage;
 
-			if(_DistToPC < 4)
+			if(_DistToPC < sniperDamageDistance)
 			{
-				_damage *= 2;
+				_damage *= sniperDamageModifier;
 			}
 		}
 
