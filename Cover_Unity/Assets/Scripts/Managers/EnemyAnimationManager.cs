@@ -22,8 +22,7 @@ public class EnemyAnimationManager : MonoBehaviour {
     public void Patrol()
     {
         enemyMesh.transform.localPosition = new Vector3(0, -1, 0);
-        enemyAnimation.SetBool("Patrolling", true);
-        
+        enemyAnimation.SetBool("Patrolling", true);        
     }
 
     public void StandingAim()
@@ -36,9 +35,10 @@ public class EnemyAnimationManager : MonoBehaviour {
         enemyAnimation.SetBool("RunToCover", true);
     }
 
-    public void HideBehindCover()
+    public void Crouch()
     {
         enemyAnimation.SetBool("CrouchAndAim", true);
+        enemyAnimation.SetBool("RunToCover", false);
     }
 
     public void Dead()
