@@ -1,21 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+
+
 [RequireComponent (typeof(NavMeshAgent))]
 public class EnemyCombatBehaviour : MonoBehaviour {
 
 	[Header("Combat Manager")]
 	[SerializeField] private CombatZoneBehaviour CZB_Script;
-    [ser
+	[SerializeField] private EnemyUIManager EUM_Script;
 
     [Header("Animation Manager")]
     [SerializeField] private EnemyAnimationManager EAM_Script;
     [SerializeField] private EnemyGunAnimation EGS_Script;
+	[SerializeField] private Animator enemyAnimator;
 
     
 
 	[Header("Status")]
 	public bool inCombat = false;
     [SerializeField] private float health;
+	private bool isDead = false;
 
 	[System.Serializable]
 	public class EnemyType
@@ -102,18 +106,23 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(inCombat && !hasLocatedTarget)
+		if(!isDead)
 		{
-			EngageInCombat();
+			if(inCombat && !hasLocatedTarget)
+			{
+				EngageInCombat();
+			}
+			
+			if (hasLocatedTarget)
+			{
+				LocateTarget();
+			}
 		}
-
-        if (hasLocatedTarget)
-        {
-            LocateTarget();
-        }
-
-    }
-
+		
+		
+		
+	}
+	
 	public void EngageInCombat()
 	{
 		switch(EnemySettings.Wave)
@@ -193,6 +202,7 @@ public class EnemyCombatBehaviour : MonoBehaviour {
     void Shoot()
     {
         StandUp();
+
     }
 
     void StandUp()
@@ -231,6 +241,14 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 
 	void Hit(float _damage)
 	{
+		health -= _damage;
+		EUM_Script.HealthUpdate(health);
+
+		if(health <= 0)
+		{
+			Dead();
+		}
+
 		if(!inCombat)
 		{
             //Set To Most Aggressive Soldier if shot first
@@ -251,5 +269,16 @@ public class EnemyCombatBehaviour : MonoBehaviour {
         }
 	}
 
+	void Dead()
+	{
+		isDead = true;
+
+		enemyAnimator.applyRootMotion = true;
+		navMeshAgent.enabled = false;
+
+		enemyCollider.enabled = false;
+
+		EAM_Script.Dead();
+	}
 
 }
