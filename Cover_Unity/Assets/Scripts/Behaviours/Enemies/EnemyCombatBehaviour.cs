@@ -14,8 +14,6 @@ public class EnemyCombatBehaviour : MonoBehaviour {
     [SerializeField] private EnemyGunAnimation EGS_Script;
 	[SerializeField] private Animator enemyAnimator;
 
-    
-
 	[Header("Status")]
 	public bool inCombat = false;
     [SerializeField] private float health;
@@ -65,6 +63,7 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 
     [Header("Shooting")]	
     [SerializeField] private bool hasLocatedTarget = false;
+    [SerializeField] private Transform gunBarrel;
 	public Transform shootingTarget;
     [SerializeField] private float shotRange; //-- Determines how far the bullet can travel
     [SerializeField] private float cooldownTime; //-- Determines the time between shots
@@ -75,7 +74,8 @@ public class EnemyCombatBehaviour : MonoBehaviour {
     [SerializeField] private float xAccuracy; //-- Determines how close to the centre of the screen on the X Axis the shot is
     [SerializeField] private float yAccuracy; //-- Determines how close to the centre of the screen on the Y Axis the shot is
     private float startingYAccuracy;
-    [SerializeField] private float recoilCooldownTime; //-- Determines the amount of time between individual shots - relates more for SMG mode   
+    [SerializeField] private float recoilCooldownTime; //-- Determines the amount of time between individual shots - relates more for SMG mode  
+    private bool isShooting = false; 
 
     [Header("Movement")]
 	[SerializeField] private NavMeshAgent navMeshAgent;
@@ -197,12 +197,40 @@ public class EnemyCombatBehaviour : MonoBehaviour {
         transform.LookAt(_targetPos);
 
         //Start Shooting
+        if (!isShooting)
+        {
+            StartCoroutine(Shoot());
+            isShooting = true;
+        }
+       
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
         StandUp();
 
+        if (timeStamp <= Time.time)
+        {
+            for(int i = 0; i < burstRate; i++)
+            {
+                yield return new WaitForSeconds(recoilCooldownTime);
+
+                Vector3 _fwd = gunBarrel.TransformDirection(Vector3.forward);
+
+                RaycastHit hit;
+                
+                if(Physics.Raycast(gunBarrel.position, _fwd, out hit, 100))
+                {
+                    if(hit.collider.tag == "Player")
+                    {
+                        Debug.Log("Success!!");
+                    }
+                }                               
+            }
+        }
+
+        timeStamp += cooldownTime;
+        isShooting = false;
     }
 
     void StandUp()
