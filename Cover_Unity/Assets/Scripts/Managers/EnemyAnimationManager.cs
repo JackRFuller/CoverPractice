@@ -28,6 +28,9 @@ public class EnemyAnimationManager : MonoBehaviour {
     public void StandingAim()
     {
         enemyAnimation.SetBool("StandingAim", true);
+        enemyAnimation.SetBool("Shooting", false);
+        enemyAnimation.SetBool("Patrolling", false);
+        enemyAnimation.SetBool("CrouchAndAim", false);
     }
 
     public void RunToCover()
@@ -39,6 +42,16 @@ public class EnemyAnimationManager : MonoBehaviour {
     {
         enemyAnimation.SetBool("CrouchAndAim", true);
         enemyAnimation.SetBool("RunToCover", false);
+        enemyAnimation.SetBool("Shooting", false);
+        enemyAnimation.SetBool("Patrolling", false);
+    }
+
+    public void Shoot()
+    {
+        enemyAnimation.SetBool("Shooting", true);
+        enemyAnimation.SetBool("StandingAim", false);
+        enemyAnimation.SetBool("CrouchAndAim", false);
+        enemyAnimation.SetBool("Patrolling", false);
     }
 
     public void Dead()

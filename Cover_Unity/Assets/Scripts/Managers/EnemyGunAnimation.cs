@@ -40,7 +40,9 @@ public class EnemyGunAnimation : MonoBehaviour {
     {
         gunController.Play(standAndAim.name);
         transform.localPosition = standingAimPos;
-        transform.localRotation = Quaternion.Euler(standingAimRot);        
+        transform.localRotation = Quaternion.Euler(standingAimRot);
+
+    
         
     }
     public void Crouching()
@@ -48,6 +50,8 @@ public class EnemyGunAnimation : MonoBehaviour {
         gunController.Play(crouchAndAim.name);
         transform.localPosition = crouchingPos;
         transform.localRotation = Quaternion.Euler(crouchingRot);
+
+       
     }
     public void RunToCover()
     {

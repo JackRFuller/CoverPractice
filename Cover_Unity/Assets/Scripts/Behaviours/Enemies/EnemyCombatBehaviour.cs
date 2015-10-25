@@ -22,6 +22,14 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 	[System.Serializable]
 	public class EnemyType
 	{
+        public enum IdleActivity
+        {
+            Idle,
+            Patrol,
+        }
+
+        public IdleActivity currentAcivity;
+
 		public enum SoldierWave
 		{
 			Wave1,
@@ -49,6 +57,13 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 
 	public EnemyType EnemySettings;
 
+    [Header("Patrolling")]
+    [SerializeField] private Transform[] patrolWaypoints;
+    [SerializeField] private float distanceToWaypoint;
+    [SerializeField] private float patrolSpeed;
+    private int targetWaypoint;
+    private bool setValues;
+
 	[Header("Cover")]
 	[SerializeField] private bool isInCover;
 	public Transform allocatedCover;
@@ -75,7 +90,17 @@ public class EnemyCombatBehaviour : MonoBehaviour {
     [SerializeField] private float yAccuracy; //-- Determines how close to the centre of the screen on the Y Axis the shot is
     private float startingYAccuracy;
     [SerializeField] private float recoilCooldownTime; //-- Determines the amount of time between individual shots - relates more for SMG mode  
-    private bool isShooting = false; 
+    private bool isShooting = false;
+
+    [Header("Moving into Shooting")]
+    [SerializeField] private float secondsBeforeShooting; //--Determines how many seconds before the soldier starts shooting
+    [SerializeField] private bool isMovingIntoShooting = false;
+    private bool isShootAnimPlaying = false;
+
+    [Header("Damage")]
+    [SerializeField] private float smgDamageBase;
+    [SerializeField] private float sniperDamageBase;
+
 
     [Header("Movement")]
 	[SerializeField] private NavMeshAgent navMeshAgent;
@@ -94,6 +119,7 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 	{
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		shootingTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        timeStamp = Time.time;
 
         //ColliderValues
         enemyCollider = GetComponent<CapsuleCollider>();
@@ -101,6 +127,9 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 
         //Animation
         EAM_Script = GetComponent<EnemyAnimationManager>();
+
+        //SetSpeedToPatrollingSpeed
+        navMeshAgent.speed = patrolSpeed;
 	}
 	
 	// Update is called once per frame
@@ -108,20 +137,60 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 
 		if(!isDead)
 		{
+            if (!inCombat)
+            {
+                DetermineActivity();
+            }
+
 			if(inCombat && !hasLocatedTarget)
 			{
 				EngageInCombat();
 			}
 			
+
+            // Sets in motion the shooting
 			if (hasLocatedTarget)
 			{
 				LocateTarget();
+                
 			}
 		}
-		
-		
-		
 	}
+
+    void DetermineActivity()
+    {
+        if(EnemySettings.currentAcivity == EnemyType.IdleActivity.Patrol)
+        {
+            Patrol();
+        }
+    }
+
+    //Patrols through waypoints if the soldier is not in combat
+    void Patrol()
+    {
+        if (!setValues)
+        {
+            EAM_Script.Patrol();
+            setValues = true;
+        }
+
+        if(patrolWaypoints.Length != 0)
+        {
+            navMeshAgent.SetDestination(patrolWaypoints[targetWaypoint].position);
+
+            float _distance = Vector3.Distance(patrolWaypoints[targetWaypoint].position, transform.position);
+
+            if (_distance < distanceToWaypoint)
+            {
+                targetWaypoint++;
+
+                if (targetWaypoint == patrolWaypoints.Length)
+                {
+                    targetWaypoint = 0;
+                }
+            }
+        }
+    }
 	
 	public void EngageInCombat()
 	{
@@ -137,9 +206,9 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 				{
 					MoveInToCover();
 				}
-				if(isCrouching)
+				if(isInCover && isCrouching)
 				{
-                        IdentifiedTarget();
+                    IdentifiedTarget();
                 }
 			}
             if(EnemySettings.Action == EnemyType.CoreAction.StandAndShoot)
@@ -164,7 +233,7 @@ public class EnemyCombatBehaviour : MonoBehaviour {
             if (isCrouching)
             {
                     IdentifiedTarget();
-                }
+            }
 			break;
         }
 	}
@@ -176,6 +245,8 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 
 	public void MoveInToCover()
 	{
+        navMeshAgent.speed = runningSpeed;
+
         //Animation
         EAM_Script.RunToCover();
         EGS_Script.RunToCover();
@@ -186,33 +257,50 @@ public class EnemyCombatBehaviour : MonoBehaviour {
 
 		if(_distToCover <= inCoverLimit)
 		{
-            CrouchDown();
+            CrouchDown();           
 			isInCover = true;
 		}
 	}
 
+    /// <summary>
+    /// Moves the Soldier to face the Player
+    /// </summary>
     void LocateTarget()
     {
         Vector3 _targetPos = new Vector3(shootingTarget.position.x, transform.position.y, shootingTarget.position.z);
         transform.LookAt(_targetPos);
 
-        //Start Shooting
-        if (!isShooting)
+        if (!isMovingIntoShooting)
         {
-            StartCoroutine(Shoot());
-            isShooting = true;
+            StartCoroutine(MoveIntoShooting());
+            isMovingIntoShooting = true;
         }
-       
     }
 
+    IEnumerator MoveIntoShooting()
+    {
+        yield return new WaitForSeconds(secondsBeforeShooting);
+        StartCoroutine(Shoot());
+        Debug.Log("Begin Shooting " + gameObject.name);
+    }
+
+
+    /// <summary>
+    /// Shoots the enemy - is triggered by MoveIntoShooting()
+    /// </summary>   
     IEnumerator Shoot()
     {
-        StandUp();
-
         if (timeStamp <= Time.time)
         {
-            for(int i = 0; i < burstRate; i++)
+            for (int i = 0; i < burstRate; i++)
             {
+                if (!isShootAnimPlaying)
+                {
+                    EAM_Script.Shoot();
+                    isShootAnimPlaying = true;
+                    Debug.Log("ShootingAnim " + gameObject.name);
+                }
+
                 yield return new WaitForSeconds(recoilCooldownTime);
 
                 Vector3 _fwd = gunBarrel.TransformDirection(Vector3.forward);
@@ -223,14 +311,60 @@ public class EnemyCombatBehaviour : MonoBehaviour {
                 {
                     if(hit.collider.tag == "Player")
                     {
-                        Debug.Log("Success!!");
+                        CalculateDamage(hit.collider.gameObject);
+                        Debug.Log("Hit Player " + gameObject.name);
                     }
                 }                               
             }
         }
 
+        ShootingCoolDown();
+    }
+
+    void CalculateDamage(GameObject _player)
+    {
+        float _damage = 0;
+
+        if(EnemySettings.WeaponType == EnemyType.Weapon.SMG)
+        {
+            _damage = smgDamageBase;
+        }
+
+        if (EnemySettings.WeaponType == EnemyType.Weapon.Sniper)
+        {
+            _damage = sniperDamageBase;
+
+            float _distance = Vector3.Distance(_player.transform.position, transform.position);
+
+            if(_distance < 2)
+            {
+                _damage *= 1.5F;
+            }
+        }
+
+        _player.SendMessage("Hit",_damage, SendMessageOptions.DontRequireReceiver);
+    }
+
+
+    /// <summary>
+    /// Initiated After the Soldier has shot a series of rounds
+    /// Determines the Soldier's next action
+    /// </summary>
+    void ShootingCoolDown()
+    {
         timeStamp += cooldownTime;
-        isShooting = false;
+        isMovingIntoShooting = false;
+        isShootAnimPlaying = false;
+
+        if (EnemySettings.Action == EnemyType.CoreAction.HideInCover)
+        {
+            CrouchDown();            
+        }
+
+        if(EnemySettings.Action == EnemyType.CoreAction.StandAndShoot)
+        {
+            StandUp();
+        }
     }
 
     void StandUp()
@@ -255,6 +389,9 @@ public class EnemyCombatBehaviour : MonoBehaviour {
         }
     }
 
+
+    //Sets the Enemy into the Crouch Down Position
+    //Is Triggered the Soldier gets into cover
     void CrouchDown()
     {
         //Animation
